@@ -6,5 +6,5 @@ document.addEventListener("DOMContentLoaded", function () {
       surprise.classList.remove('hidden');
       openBtn.style.display = 'none';
     });
+    
   });
-  
