@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cinzel Decorative', cursive;
+  }
+  
+  body {
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('https://i.pinimg.com/originals/e0/64/5f/e0645fda157fa33eb4fc1acffcf1f39c.gif');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border: 2px solid #c1121f;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px #c1121f;
+    max-width: 400px;
+    transition: transform 0.5s ease;
+  }
+  
+  .card h1 {
+    margin-bottom: 20px;
+    color: #ffb703;
+    font-size: 2em;
+  }
+  
+  .card button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #c1121f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .card button:hover {
+    background-color: #9e0f18;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .cake {
+    margin-top: 30px;
+  }
+  
+  .cake .layer {
+    width: 200px;
+    height: 40px;
+    background: #8b0000;
+    margin: 0 auto 5px;
+    border-radius: 5px;
+  }
+  
+  .cake .layer:nth-child(2) {
+    background: #a52a2a;
+  }
+  
+  .cake .layer:nth-child(3) {
+    background: #d2691e;
+  }
+  
+  .candles {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .candle {
+    width: 10px;
+    height: 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 2px;
+  }
+  
+  .flame {
+    width: 8px;
+    height: 8px;
+    background: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 1px;
+    animation: flicker 0.6s infinite alternate;
+  }
+  
+  @keyframes flicker {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.2); opacity: 0.7; }
+  }
+  
+  .message {
+    margin-top: 20px;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    color: #fff;
+  }
+  
+  .sigil {
+    margin-top: 25px;
+    width: 100px;
+    opacity: 0.6;
+  }
+  
