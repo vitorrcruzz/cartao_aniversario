@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Feliz Aniversário!</title>
-  <link rel="stylesheet" href="assets/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2e0e6ad4b.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cartão de Aniversário</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="shortcut icon" href="imagens/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<body>
 
-  <div class="card" id="card">
+<body class="cute-theme">
+    <div class="card">
+        <h1 class="intro-title">Oi, Gaby!</h1>
+        <p class="intro-text">Temos uma surpresa para você!</p>
+        <button id="openBtn" class="cute-btn">Abrir Cartão</button>
 
-    <!-- Parte que desaparece -->
-    <div id="pre-card">
-      <h1><i class="fas fa-star"></i> Hey, Gaby! <i class="fas fa-star"></i></h1>
-      <p>Tem uma surpresa pra você 👀</p>
-      <button id="openBtn"><i class="fas fa-gift"></i> Abrir Cartão</button>
-    </div>
-
-    <!-- Surpresa -->
-    <div class="hidden" id="surprise">
-      <div class="cake">
-        <div class="candles">
-          <div class="candle"><div class="flame"></div></div>
-          <div class="candle"><div class="flame"></div></div>
-          <div class="candle"><div class="flame"></div></div>
+        <div id="surpriseContent" class="hidden">
+            <div class="cake">
+                <div class="candles">
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                </div>
+                <div class="layer chocolate"></div>
+                <div class="layer strawberry"></div>
+                <div class="layer vanilla"></div>
+                <div class="plate"></div>
+            </div>
+            <p class="message">Parabéns pelo seu dia! Que seja repleto de alegria, carinho e muitas risadas! 🎉🎂</p>
         </div>
-        <div class="layer chocolate"></div>
-        <div class="layer strawberry"></div>
-        <div class="layer vanilla"></div>
-        <div class="plate"></div>
-      </div>
-
-      <div class="message">
-        <i class="fas fa-heart"></i> Feliz aniversário! Que seu dia seja tão épico quanto um episódio de Supernatural.<br><br>
-        Que os irmãos Winchester te protejam e que você continue sendo essa pessoa incrível e forte!<br><br>
-        💖 Com carinho, Vitor
-      </div>
-
-      <img class="sigil" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Anti-possession_symbol.svg/1200px-Anti-possession_symbol.svg.png" alt="Símbolo Anti-Posse">
     </div>
 
-  </div>
+    <button id="toggleThemeBtn" class="toggle-btn">Estilo Supernatural</button>
 
-  <script src="assets/script.js"></script>
+    <script src="assets/script.js"></script>
 </body>
+
 </html>

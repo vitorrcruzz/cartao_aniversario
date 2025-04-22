@@ -2,56 +2,74 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Cinzel Decorative', cursive;
   }
   
   body {
-    background-color: #111;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    background-image: url('https://i.pinimg.com/originals/e0/64/5f/e0645fda157fa33eb4fc1acffcf1f39c.gif');
-    background-size: cover;
-    background-position: center;
+    font-family: 'Pacifico', cursive;
+    transition: all 0.4s ease;
   }
   
+  /* Tema fofinho (padrão) */
+  body.cute-theme {
+    background: linear-gradient(135deg, #fbd3e9, #bbd2c5);
+    color: #333;
+  }
+  
+  /* Tema Supernatural */
+  body.supernatural-theme {
+    background: url('https://i.pinimg.com/originals/e0/64/5f/e0645fda157fa33eb4fc1acffcf1f39c.gif') no-repeat center center/cover;
+    color: #fff;
+    font-family: 'Cinzel Decorative', cursive;
+  }
+  
+  /* Cartão */
   .card {
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(255, 255, 255, 0.85);
     padding: 30px;
-    border: 2px solid #c1121f;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 0 20px #c1121f;
     max-width: 400px;
-    transition: transform 0.5s ease;
+    margin: 60px auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+  }
+  
+  body.supernatural-theme .card {
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid #c1121f;
+    box-shadow: 0 0 20px #c1121f;
   }
   
   .card h1 {
-    margin-bottom: 20px;
-    color: #ffb703;
     font-size: 2em;
+    margin-bottom: 20px;
   }
   
   .card p {
+    margin-bottom: 20px;
     font-size: 1.1em;
-    margin-bottom: 15px;
   }
   
   .card button {
     padding: 10px 20px;
     font-size: 1em;
-    background-color: #c1121f;
+    background-color: #ff69b4;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
   }
   
   .card button:hover {
+    background-color: #ff1493;
+  }
+  
+  body.supernatural-theme .card button {
+    background-color: #c1121f;
+  }
+  
+  body.supernatural-theme .card button:hover {
     background-color: #9e0f18;
   }
   
@@ -59,10 +77,10 @@
     display: none;
   }
   
-  /* CAKE STYLE */
+  /* Bolo */
   .cake {
     margin-top: 30px;
-    margin-bottom: 30px; /* Espaço entre o bolo e a mensagem */
+    margin-bottom: 30px;
     position: relative;
     width: 200px;
     margin-left: auto;
@@ -74,23 +92,18 @@
     height: 40px;
     border-radius: 50% / 10%;
     margin-bottom: -10px;
-    position: relative;
-    z-index: 1;
   }
   
   .chocolate {
     background: #5c1c0a;
-    box-shadow: inset 0 -3px 0 #2e0a04;
   }
   
   .strawberry {
-    background: #d94a6a;
-    box-shadow: inset 0 -3px 0 #9c2f4a;
+    background: #ffb6c1;
   }
   
   .vanilla {
-    background: #ffe6a7;
-    box-shadow: inset 0 -3px 0 #d1b66f;
+    background: #fffacd;
   }
   
   .plate {
@@ -101,7 +114,6 @@
     position: absolute;
     bottom: -20px;
     left: -20px;
-    z-index: 0;
   }
   
   .candles {
@@ -115,8 +127,8 @@
     width: 10px;
     height: 30px;
     background: #fff;
-    position: relative;
     border-radius: 2px;
+    position: relative;
   }
   
   .flame {
@@ -139,12 +151,34 @@
     margin-top: 20px;
     font-size: 1.1em;
     line-height: 1.4em;
-    color: #fff;
   }
   
   .sigil {
     margin-top: 25px;
     width: 100px;
     opacity: 0.6;
+  }
+  
+  body.cute-theme .sigil {
+    display: none;
+  }
+  
+  /* Botão de alternar tema */
+  #toggleThemeBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 999;
+    font-size: 0.9em;
+  }
+  
+  #toggleThemeBtn:hover {
+    background: #444;
   }
   
